@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta th:replace="ss-blocks::head-meta" />
+	<title>Space Sweepers | Presentation</title>
+	<link th:replace="ss-blocks::head-link" />
+	<link rel="stylesheet" type="text/css" href="/css/ss/presentation.css" />
+	<script th:replace="ss-blocks::head-script"></script>
+	<script defer type="text/javascript" src="/js/ss/presentation.js"></script>
+</head>
+<body>
+<header th:replace="ss-blocks::header"></header>
+<main class="main">
+	<!--<h2 class="screenshots__h2">Screenshots</h2>-->
+	<div id="screenshots__images" onclick="onClickScreenshot(this);">
+		<img class="screenshots__left-hidden" src="/img/ss/presentation/p8.jpg"/>
+		<img class="screenshots__left" src="/img/ss/presentation/p1.jpg"/>
+		<img class="screenshots__center" src="/img/ss/presentation/p2.jpg"/>
+		<img class="screenshots__right" src="/img/ss/presentation/p3.jpg"/>
+		<img class="screenshots__right-hidden" src="/img/ss/presentation/p4.jpg"/>
+	</div>
+	<div id="controls">
+		<div id="controls__arrow-left-wrapper" onclick="onClickArrow('left');">
+			<img id="controls__arrow-left" src="/img/ss/arrow-left.svg"/>
+		</div>
+		<div id="controls__rectangles">
+			<img num="1" class="controls__rectangle controls__rectangle-selected" src="/img/ss/rectangle.svg"/>
+			<img num="2" class="controls__rectangle" src="/img/ss/rectangle.svg"/>
+			<img num="3" class="controls__rectangle" src="/img/ss/rectangle.svg"/>
+			<img num="4" class="controls__rectangle" src="/img/ss/rectangle.svg"/>
+			<img num="5" class="controls__rectangle" src="/img/ss/rectangle.svg"/>
+			<img num="6" class="controls__rectangle" src="/img/ss/rectangle.svg"/>
+			<img num="7" class="controls__rectangle" src="/img/ss/rectangle.svg"/>
+			<img num="8" class="controls__rectangle" src="/img/ss/rectangle.svg"/>
+		</div>
+		<div id="controls__arrow-right-wrapper" onclick="onClickArrow('right');">
+			<img id="controls__arrow-right" src="/img/ss/arrow-right.svg" />
+		</div>
+	</div>
+	<h2 id="game">Game</h2>
+	<div id="game-text">There are no unimportant objects on the way to a great goal. Asteroids, space debris and other items can be very useful in the future. Have a nice flight and may Nuwa be with you.</div>
+</main>
+<footer th:replace="ss-blocks::footer"></footer>
+</body>
+</html>

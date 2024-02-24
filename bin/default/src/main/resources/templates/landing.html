@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta name="theme-color" content="#090909"/>
+	<meta name="viewport"
+	      content="width=device-width, initial-scale=1.0, minimum-scale=0.25, maximum-scale=1.0, user-scalable=0"/>
+	<meta th:replace="blocks::meta"/>
+
+	<title>NUWA INU</title>
+	<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+	      rel="stylesheet"/>
+
+	<link rel="stylesheet" type="text/css" href="/css/landing.css"/>
+</head>
+<body>
+<!--	<div id="main">-->
+<div class="bgimg"></div>
+<div class="hr hr1"></div>
+
+<div class="screen screen1" data-anchor="block1">
+	<div class="screen1__left">
+		<a href="/trade">
+			<img class="screen1__logo" src="/img/landing/logo.png"/>
+		</a>
+		<div class="screen1__text">First city on Mars, live long and prosper</div>
+	</div>
+	<div class="screen1__right">
+		<img class="screen1__burger" alt="Menu" title="Main menu" src="/img/landing/burger.svg"
+		     onclick="onClickBurger();"/>
+	</div>
+</div>
+
+<div class="hr hr2"></div>
+
+<div class="screen screen2 hidden" data-anchor="block2">
+	<div class="screen2__text1">«Earth is the cradle of mankind, but one<br/>cannot live one's whole life in a cradle»
+	</div>
+	<div class="screen2__text2">Konstantin Eduardovich Tsiolkovsky</div>
+	<div>
+		<div class="screen2__text3">The first digital financial system built on a blockchain with in-game testing in the
+			metauniverse, where each player can get a place in the city of the future and build their new life of
+			financial stability and wealth.
+		</div>
+		<div class="screen2__text3-switcher">
+			<span class="screen2__case-1 selected" onclick="onClickScreen2Switcher(this);"
+			      data-text="The first digital financial system built on a blockchain with in-game testing in the metauniverse, where each player can get a place in the city of the future and build their new life of financial stability and wealth."></span>
+			<span class="screen2__case-2" onclick="onClickScreen2Switcher(this);"
+			      data-text="Decentralized exchange with unique token economics, which was built on the differential math system with the use of clear and understandable terms of exchange where the liquidity representatives from profit and safety of their assets."></span>
+			<span class="screen2__case-3" onclick="onClickScreen2Switcher(this);"
+			      data-text="Decentralized NFT marketplace, that allows the system to regulate content and product creation, without the human intervention and regulation, with the opportunity to keep your NFT tokens in decentralized storage and receive profit."></span>
+			<span class="screen2__case-4" onclick="onClickScreen2Switcher(this);"
+			      data-text="Game universe, get to Mars eliminating the dangers, create the settlement on Mars, by destroying the resistance, build your city with a financial ecosystem, that allows you to build the world on Mars."></span>
+			<span class="screen2__case-5" onclick="onClickScreen2Switcher(this);"
+			      data-text="Farming – block your tokens and receive new ones, to create new projects and opportunities."></span>
+		</div>
+	</div>
+	<img class="screen2__arrow" src="/img/landing/arrow.svg" onclick="onClickDown();"/>
+</div>
+
+<div class="hr hr4 hidden"></div>
+
+<div class="screen screen4 hidden" data-anchor="block4">
+	<div class="screen4__holders">
+		<img class="screen4__holders-img" src="/img/landing/holders.svg"/>
+		<div class="screen4__holders-amount">0</div>
+		<div class="screen4__holders-text">Holders</div>
+	</div>
+	<div class="screen4__burned">
+		<img class="screen4__burned-img" src="/img/landing/burned.svg"/>
+		<div class="screen4__burned-amount">0</div>
+		<div class="screen4__burned-text">Tokens Burned</div>
+	</div>
+	<div class="screen4__liquidity">
+		<img class="screen4__liquidity-img" src="/img/landing/liquidity.svg"/>
+		<div class="screen4__liquidity-amount">$0</div>
+		<div class="screen4__liquidity-text">Liquidity</div>
+	</div>
+	<div class="screen4__capitalization">
+		<img class="screen4__capitalization-img" src="/img/landing/capitalization.png"/>
+		<div class="screen4__capitalization-amount">$0</div>
+		<div class="screen4__capitalization-text">Сapitalization</div>
+	</div>
+	<div class="screen4__course">
+		<img class="screen4__course-img" src="/img/landing/course.png"/>
+		<div class="screen4__course-amount">0 USD</div>
+		<div class="screen4__course-text">Сourse</div>
+	</div>
+</div>
+
+<div class="hr hr3 hidden"></div>
+
+<div class="screen screen3 hidden" data-anchor="block3">
+	<video class="screen3__background-video" preload="metadata" muted="muted" autoplay playsinline loop>
+		<source type="video/mp4" src="/video/background-nuwa-m.mp4">
+	</video>
+	<p class="screen3__a" href="#">Metaverse soon</p>
+</div>
+
+<div class="hr hr51 hidden"></div>
+
+<div class="screen screen51 hidden" data-anchor="block51">
+	<div class="screen51__video">
+		<video poster="/img/ss/poster.jpg" class="screen51__video-file">
+			<source type="video/mp4" src="/video/ss/SpaceSweepers.mp4">
+		</video>
+		<div class="screen51__video-play" onclick="onClickPlay();"></div>
+	</div>
+	<a class="screen51__a" href="/space-sweepers/home">GAME</a>
+</div>
+
+<div class="hr hr5 hidden"></div>
+
+<div class="screen screen5 hidden" data-anchor="block5">
+	<img class="screen5__img" src="/img/landing/home.jpg">
+	<a class="screen5__a" href="/trade">
+		<div class="screen5__button">SWAP</div>
+	</a>
+</div>
+
+<div class="hr hr6 hidden"></div>
+
+<div class="screen screen6 hidden" data-anchor="block6">
+	<!--<a href="https://twitter.com/nuwa_inu"><img src="/img/landing/s6/s6-1.png" /></a>
+	<a href="https://twitter.com/nuwa_inu"><img src="/img/landing/s6/s6-2.png" /></a>
+	<a href="https://twitter.com/nuwa_inu"><img src="/img/landing/s6/s6-3.png" /></a>
+	<a href="https://twitter.com/nuwa_inu"><img src="/img/landing/s6/s6-4.png" /></a>
+	-->
+	<a class="twitter-timeline" data-width="1200" data-height="1500" data-dnt="true" data-theme="dark"
+	   href="https://twitter.com/nuwa_inu?ref_src=twsrc%5Etfw">Tweets by nuwa_inu</a>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<div class="hr hr7 hidden"></div>
+
+<div class="screen screen7 hidden" data-anchor="block7">
+	<img class="screen7__to-left" alt="Slide" title="Slide to the left" src="/img/landing/to-left.svg"
+	     onclick="onClickToLeft()"/>
+	<div class="screen7__images">
+		<img class="screen7__left-hidden" src="/img/landing/s7/s7-19.jpg"/>
+		<img class="screen7__left" src="/img/landing/s7/s7-1.jpg"/>
+		<img class="screen7__center" src="/img/landing/s7/s7-2.jpg"/>
+		<img class="screen7__right" src="/img/landing/s7/s7-3.jpg"/>
+		<img class="screen7__right-hidden" src="/img/landing/s7/s7-4.jpg"/>
+	</div>
+	<img class="screen7__to-right" alt="Slide" title="Slide to the right" src="/img/landing/to-right.svg"
+	     onclick="onClickToRight()"/>
+</div>
+
+<div class="screen screen9 hidden">
+	<div class="screen9__title">Mission</div>
+	<div class="screen9__text1">
+		<div class="screen9__text1-col1">While on Earth people share the financial system pie, trying to play the big
+			politics, rich become richer and poor become poorer. The Crypto world turned into the instrument of
+			manipulations, games, and financial schemes, where money flows from the hands of the weak into the hands of
+			the strong.
+		</div>
+		<div class="screen9__text1-col2">
+			<div>In the chase for money, people forgot the essence of mankind and its correlation with the recourses of
+				the planet Earth, which provides food and shelter for everyone, who was born on this planet.
+			</div>
+			<img class="screen9__arrow" src="/img/landing/arrow-continue.svg"/>
+		</div>
+		<div class="screen9__text1-col3">
+			<div>The attempts to fix mankind and keep peace in this world lead to disunity, where the world is rolling
+				into the abyss of antisocial hopelessness.
+			</div>
+			<img class="screen9__arrow" src="/img/landing/arrow-continue.svg"/>
+		</div>
+	</div>
+	<div class="screen9__text2">We are the community of the NUWA INU pioneering explorers, that established the way for
+		building the new financial system in the first city on the planet Mars. We leave behind the traditional monetary
+		policy of planet Earth, which showed, that that under the inflationary model, when only a handful of people can
+		print money for themselves and take resources from others, leads the world to poverty and destruction.
+	</div>
+	<div class="screen9__text3">The new financial system of NUWA INU will be tested on blockchains of the ERC20, BEP20,
+		MATIC, and SOLANA network and it will create crosschain bridges for all the degen tokens to integrate networks
+		and implement an unprecedented system of the deflationary model with an inflationary stablecoin, that would be
+		possible to use on its blockchain, which will be the first to be launched on the planet Mars.
+	</div>
+</div>
+
+<div class="screen screen10 hidden">
+	<div class="screen10__title">Road Map</div>
+	<div class="screen10__text1">After the INU stablecoin presale on the dapp smart contract platform, the NUWA INU
+		project will be free launched in the BEP20 network on the PancakeSwap DEX exchange, where the NUWA token would
+		be available to purchase only for the INU token.
+	</div>
+	<div class="screen10__text2">The NUWA token will be created on a deflationary model, which in the financial system
+		of the NUWA INU project will be constantly burned, bought off by the hedge bot system using smart contracts, and
+		sold only for its own NUWA INU stablecoin and will have a constantly growing rate.
+	</div>
+	<div class="screen10__arrow1">
+		<img class="screen10__arrow1-1" src="/img/landing/arrow-continue.svg"/>
+		<img class="screen10__arrow1-2" src="/img/landing/arrow-continue.svg"/>
+		<img class="screen10__arrow1-3" src="/img/landing/arrow-continue.svg"/>
+	</div>
+	<div class="screen10__text3">
+		<div class="screen10__text3-col1">The NUWA token mechanism will be based on a deflationary model. The token will
+			be constantly burned, due to the system buyout of smart contracts bots, and sold only for its own NUWA INU
+			stablecoin, so this will ensure its constant growth.
+		</div>
+		<div class="screen10__text3-col2">The NUWA token will be protected from listing on centralized exchanges. This
+			decision excludes the possibility of involving it in margin trading, which kills the development of projects
+			by means of rate dumps.
+		</div>
+		<div class="screen10__text3-col3">The NUWA INU project will have its own dapp platform for exchange, staking and
+			farming, where each token holder can park their tokens and receive INU stablecoins and NUWA tokens.
+		</div>
+	</div>
+	<div class="screen10__text4">The NUWA token will be distributing its deflationary emission by staking tokens and
+		stablecoins on its dapp platform NUWA INU.
+	</div>
+	<div class="screen10__text5">The INU stablecoin will be distributing its inflationary emission through the NUWA
+		token held by users.
+	</div>
+	<div class="screen10__arrow2">
+		<img class="screen10__arrow2-1" src="/img/landing/arrow-continue.svg"/>
+		<img class="screen10__arrow2-2" src="/img/landing/arrow-continue.svg"/>
+	</div>
+	<div class="screen10__text6">
+		<div class="screen10__text6-col1">The NUWA INU project will provide each NUWA tokens top holder with a hedge bot
+			to use, which will make it possible to make money on algorithmic trading, where the bot system will hedge
+			risks, working in both directions on its platform using a margin system.
+		</div>
+		<div class="screen10__text6-col2">The NUWA INU project, upon reaching over 1 million users, will launch its
+			decentralized blockchain with the possibility to create smart contracts for the Internet of private money
+			and services that will be built in NUWA INU.
+		</div>
+	</div>
+</div>
+
+<div class="screen screen11 hidden">
+	<div class="screen11__title">Vision</div>
+	<div class="screen11__text1">Nowadays, every token or cryptocurrency is correlated with the Bitcoin exchange rate.
+		For the first time in history, we saw an opportunity to break this connection by insuring our rate using hedge
+		trading in both directions in margin trading, where we included the volatility ratios of our tokens, which we
+		created and were able to implement by increasing trading volumes and liquidity.
+	</div>
+	<div class="screen11__arrow1">
+		<img class="screen11__arrow1-1" src="/img/landing/arrow-continue.svg"/>
+		<img class="screen11__arrow1-2" src="/img/landing/arrow-continue.svg"/>
+		<img class="screen11__arrow1-3" src="/img/landing/arrow-continue.svg"/>
+	</div>
+	<div class="screen11__text2">
+		<div class="screen11__text2-col1">We see that the deflationary model of the financial system is the most stable
+			and inspires confidence by users who have learned to see profit in the long term with daily interest
+			accruals, where we broke the usual hyperemission model using a simple mathematical formula and was able to
+			make a balance using the differential numeric system.
+		</div>
+		<div class="screen11__text2-col2">The balance of the differential numeric system makes it possible to use the
+			relationship of the deflationary system with the inflationary one, providing the weak inflationary
+			stablecoin INU in exchange for the stable and constantly growing NUWA token, while not losing the value of
+			both. In the usual model, there are stocks with the distribution of INU stablecoins issue as dividends,
+			where an automated system without a human factor consistently balances and develops itself.
+		</div>
+		<div class="screen11__text2-col3">A smart contract that digitized the traditional financial system model and
+			removed the human factor, introduced the proper relationship between mathematics and the digital economy.
+		</div>
+	</div>
+</div>
+
+<div class="hr hr8"></div>
+
+<div class="screen screen8" data-anchor="block8">
+	<div class="screen8__right">
+		<a href="#">
+			<svg id="screen8__logo-binance" viewBox="2 2 20 20" fill="none">
+				<path d="M6.517 12l-2.26 2.258L2 12l2.258-2.258L6.517 12zm5.482-5.486l3.87 3.87 2.26-2.258-3.872-3.87L12 2 9.74 4.258 5.87 8.128l2.258 2.259 3.872-3.873zm7.743 3.226l-2.259 2.258 2.259 2.258L22 11.998 19.742 9.74zm-7.743 7.748l-3.87-3.875-2.258 2.258 3.872 3.87L11.999 22l2.258-2.258 3.871-3.87-2.258-2.259-3.871 3.875zm0-3.226l2.258-2.258L12 9.742 9.74 12 12 14.262z"
+				      fill="#FCD535"></path>
+			</svg>
+		</a>
+		<a href="https://twitter.com/nuwa_inu">
+			<img src="/img/landing/twitter.png"/>
+		</a>
+		<a href="https://t.me/spacesweepers_game">
+			<img src="/img/landing/telegram.png"/>
+		</a>
+		<a href="https://discord.gg/xkxp5JwpKE">
+			<img src="/img/landing/discord.png"/>
+		</a>
+		<a href="#">
+			<img src="/img/landing/github.png"/>
+		</a>
+	</div>
+	<div class="screen8__left">
+		<div>
+			<div class="screen8__mark">NUWA INU</div>
+			<div class="screen8__year">2022 - Decentralization</div>
+		</div>
+		<img class="screen8__left-smile" src="/img/landing/smile.png"/>
+	</div>
+</div>
+<div class="main-menu">
+	<div class="main-menu__inner-wrapper">
+		<img class="main-menu__close" alt="Close" title="Close" src="/img/landing/menu-close.svg"
+		     onclick="onClickMenuClose();"/>
+		<div class="main-menu__home" page="/">Home</div>
+		<a href="/img/ss/NUWA-INU-Pitch-Deck.pdf">
+			<div class="main-menu__pitch-deck">Pitch Deck</div>
+		</a>
+		<a href="/img/ss/NUWA-INU-White-Paper.pdf">
+			<div class="main-menu__white-paper">White Paper</div>
+		</a>
+		<a href="/space-sweepers/home">
+			<div class="main-menu__game" page="">Game</div>
+		</a>
+		<a href="/trade">
+			<div class="main-menu__swap" page="">Swap</div>
+		</a>
+		<div class="main-menu__mission" page="/mission">Mission</div>
+		<div class="main-menu__road-map" page="/road-map">Road Map</div>
+		<div class="main-menu__vision" page="/vision">Vision</div>
+		<div class="main-menu__market" page="/market">NFT Market</div>
+		<div class="main-menu__blockchain" page="/blockchain">Blockchain</div>
+		<div class="main-menu__become-tester" page="/become-tester">Become a tester</div>
+	</div>
+</div>
+<!--	</div>-->
+<!--	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+<!--	<script type="text/javascript" src="/js/fullpage.js"></script>-->
+<script type="text/javascript" src="/js/landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+/*
+  ╭────────╮
+  │  Main  │
+  ╰────────╯
+*/
+input {
+    font-family: 'Noto Sans Mono', monospace;
+    font-size: 18px;
+}
+.main {
+    text-align: center;
+}
+/*
+  ╭────────╮
+  │  Form  │
+  ╰────────╯
+*/
+form {
+    display: block;
+}
+.field {
+    text-align: left;
+    width: 480px;
+    height: 80px;
+    line-height: 80px;
+    /*display: flex;*/
+
+    margin: 26px auto 0 auto;
+    /*padding: 0 24px;*/
+}
+.field input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    /*font-family: Exoplanetaria, sans-serif;*/
+    /*font-size: 20px;*/
+    line-height: 27px;
+}
+.field > span {
+    display: inline-block;
+    position: relative;
+    margin: auto 24px;
+    width: calc(100% - 24px - 24px);
+    /*width: 100%;*/
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 20px;
+    line-height: 27px;
+}
+.login__email,
+.login__password,
+.login__nick {
+    background-image: url("/img/ss/login/input.svg");
+}
+.login__email-caption,
+.login__password-caption {
+    display: inline-block;
+    width: 104px;
+}
+.login__email-input,
+.login__password-input {
+    display: inline-block;
+    width: calc(100% - 150px);
+}
+.login__nick-caption {
+
+}
+.login__nick-input {
+    width: 254px;
+}
+.login__eye,
+.login__check-box {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 29px;
+    height: 22px;
+}
+.login__check-box {
+    top: 3px;
+}
+.login__enter {
+    text-align: center;
+}
+.login__enter-active {
+    background-image: url("/img/ss/login/btn-active.svg");
+    cursor: pointer;
+    /*transition: all 1s;*/
+}
+.login__enter-inactive {
+    background-image: url("/img/ss/login/btn-inactive.svg");
+    cursor: default;
+    /*transition: all 1s;*/
+}
+.login__link {
+    margin-top: 42px;
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 18px;
+}
+.login__link a,
+.login__link a:active,
+.login__link a:visited {
+    color: #F7B034;
+}
+.login__link a:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+}
+#login__verification {
+    width: 480px;
+}
+#login__verification__instruction {
+    width: 480px;
+    height: 191px;
+    background-image: url("/img/ss/login/verif.svg");
+    text-align: left;
+    padding:  31px 28px 0 28px;
+    box-sizing: border-box;
+}
+#login__verification__instruction > div {
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 20px;
+    line-height: 27px;
+    /*margin: 31px 28px 0 28px;*/
+}
+#login__verification__instruction {
+
+}
+#login__verification__buttons {
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
+}
+#login__verification__buttons > div {
+    width: 230px;
+    height: 80px;
+    text-align: center;
+    background-image: url("/img/ss/login/verif-small-btn.svg");
+    box-sizing: border-box;
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+#login__verification__buttons > div:first-child {
+    line-height: 80px;
+}
+#login__verification__buttons > div:last-child {
+    padding-top: 15px;
+    line-height: 25px;
+}

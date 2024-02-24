@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<meta name="robots" content="noarchive" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0  maximum-scale=1.0, user-scalable=0" />
+	<title>Chat</title>
+	<link rel="stylesheet" href="css/main.css" />
+	<script src="js/chat.js"></script>
+	<script src="js/test.js"></script>
+</head>
+<body onload="init();">
+<div>
+	<div>
+		<snap>Статус:</snap>&nbsp;&nbsp;&nbsp;&nbsp;
+		<snap id="status"></snap>
+	</div>
+	<br/><br/>
+	<div>
+		<div>Отправить сообщение пользователю с ID:&nbsp;&nbsp;<input id="userid" /></div>
+		<br/>
+		<textarea id="outgoing-message" style="width: 600px;height: 200px;"></textarea>
+		<br/>
+		<button onclick="sendToUser();">Отправить</button>
+	</div>
+	<br/><br/>
+	<div>
+		<div>Отправить сообщение группе пользователей.</div>
+		<div>ID пользователей через запятую:&nbsp;&nbsp;<input id="group" /></div>
+		<br/>
+		<textarea id="outgoing-message-to-group" style="width: 600px;height: 200px;"></textarea>
+		<br/>
+		<button onclick="sendToGroup();">Отправить</button>
+	</div>
+	<br/><br/>
+	<div>
+		<div>Входящие сообщения:</div>
+		<br/>
+		<textarea id="incoming-message" style="width: 600px;height: 200px;"></textarea>
+	</div>
+	<br/><br/>
+	<div>
+		<div>Добавить пользователя в список контактов текущего пользователя.</div>
+		<div>ID пользователя:<input id="user-add" /></div>
+		<br/>
+		<button onclick="addUserToContact();">Отправить</button>
+	</div>
+</div>
+</body>
+</html>

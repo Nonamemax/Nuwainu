@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta th:replace="ss-blocks::head-meta"/>
+	<title>Space Sweepers | Account</title>
+	<link th:replace="ss-blocks::head-link"/>
+	<link rel="stylesheet" type="text/css" href="/css/ss/account.css"/>
+	<script th:replace="ss-blocks::head-script"></script>
+	<script defer type="text/javascript" src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+	<script defer type="text/javascript" src="/js/ss/account.js"></script>
+</head>
+<body>
+<header th:replace="ss-blocks::header"></header>
+
+<main class="main">
+	<div id="block1">
+		<div id="block1__left">
+			<div id="block1__avatar-wrapper">
+				<img id="block1__avatar" src="/img/ss/avatar/1.png"/>
+				<img id="block1__avatar-frame" src="/img/ss/account/photo-frame.svg"/>
+			</div>
+			<div id="block1__nick-wrapper">
+				<div id="block1__stake">[STAKE]</div>
+				<div id="block1__nick">[[${user.nick}]]</div>
+			</div>
+		</div>
+		<div id="block1__right">
+			<div id="block1__type">Type: Owner</div>
+			<div id="block1__balance">Balance BNB: <span></span></div>
+			<div id="block1__address">Address: <span></span></div>
+		</div>
+	</div>
+	<div id="block2">
+		<img id="block2__menu" alt="menu" src="/img/ss/account/menu.svg" onclick="onClickMenu();"/>
+		<div id="block2__pillar" class=""></div>
+		<div id="block2__buttons" class="">
+			<img id="block2__change-avatar-btn" onclick="onClickChangeAvatar();" src="/img/ss/account/change-avatar-text.svg"/>
+			<img id="block2__change-nick-btn" onclick="onClickChangeNick();" src="/img/ss/account/change-nick-text.svg"/>
+			<img id="block2__change-password-btn" onclick="onClickChangePassword();" src="/img/ss/account/change-password-text.svg"/>
+			<img id="block2__reset-password-btn" onclick="onClickResetAvatar();" src="/img/ss/account/reset-password-text.svg"/>
+		</div>
+	</div>
+	<div id="block3">
+		<div id="block3__status">
+			<img src="/img/ss/account/status-text.svg"/>
+			<span>trader</span>
+		</div>
+		<div id="block3__spaceship">
+			<img src="/img/ss/account/spaceship-text.svg"/>
+			<span>cruiser</span>
+		</div>
+		<div id="block3__points">
+			<img src="/img/ss/account/points-text.svg"/>
+			<span>…</span>&nbsp;INU
+			<div id="block3__points__input-wrapper">
+				<input type="text" value="0" />
+			</div>
+			<img id="block3__points__btn" onclick="onClickClaim('points');" alt="claim" src="/img/ss/account/claim.svg"/>
+		</div>
+		<div id="block3__nft">
+			<img src="/img/ss/account/nft-text.svg"/>
+			<span>0</span>&nbsp;NUWA
+			<div id="block3__nft__input-wrapper">
+				<input type="text" value="0" />
+			</div>
+			<img id="block3__nft__btn" onclick="onClickClaim('nft');" alt="claim" src="/img/ss/account/claim.svg"/>
+		</div>
+	</div>
+</main>
+<footer th:replace="ss-blocks::footer"></footer>
+</body>
+</html>

@@ -1,0 +1,223 @@
+/*
+  ╭────────╮
+  │  Font  │
+  ╰────────╯
+*/
+@font-face {
+    font-family: Excluded;
+    font-style: normal;
+    font-weight: 400;
+    src: local("Excluded"), url("/font/Excluded.woff") format("woff");
+}
+/*@font-face {
+    font-family: ExcludedItalic;
+    font-style: normal;
+    font-weight: 400;
+    src: local("ExcludedItalic"), url("/font/ExcludedItalic.woff") format("woff");
+}*/
+.main {
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 20px;
+}
+/*
+  ╭──────────╮
+  │  block1  │
+  ╰──────────╯
+*/
+#block1 {
+    height: 132px;
+    display: flex;
+    justify-content: space-between;
+}
+#block1__left {
+    width: 371px;
+    height: 132px;
+    display: flex;
+}
+#block1__avatar-wrapper {
+    position: relative;
+    width: 131px;
+    height: 131px;
+}
+#block1__avatar {
+    position: relative;
+    top: 8px;
+    left: 2px;
+    width: 121px;
+    height: 121px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 40% 100%, 0% 60%);
+}
+#block1__avatar-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#block1__nick-wrapper {
+    /*display: flex;*/
+    margin-top: 36px;
+    margin-left: 49px;
+}
+#block1__stake {
+    color: #F7B034;
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 18px;
+}
+#block1__nick {
+    margin-top: 10px;
+    font-family: Excluded, sans-serif;
+    font-size: 29px;
+}
+#block1__right {
+    width: 22%;
+    align-items: center;
+}
+#block1__type,
+#block1__balance,
+#block1__address {
+    margin-top: 12px;
+}
+/*
+  ╭──────────╮
+  │  block2  │
+  ╰──────────╯
+*/
+#block2 {
+    position: relative;
+    width: 100%;
+    margin-top: 65px;
+    height: 68px;
+    font-size: 0;
+}
+#block2 > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+#block2__menu {
+    width: 109px;
+    height: 68px;
+    cursor: pointer;
+}
+#block2__pillar {
+    position: relative;
+    width: 3px;
+    height: 20px;
+    margin-left: 6px;
+    background-color: white;
+    transition: margin-left 0.3s;
+}
+.block2__pillar--right {
+    margin-left: 34px !important;
+}
+#block2__buttons {
+    position: absolute;
+    top: 9px;
+    left: 180px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.block2__buttons--opacity {
+    opacity: 100 !important;
+}
+#block2__change-avatar-btn {
+    width: 140px;
+    height: 45px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+#block2__change-nick-btn {
+    width: 120px;
+    height: 45px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+#block2__change-password-btn {
+    width: 154px;
+    height: 45px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+#block2__reset-password-btn {
+    width: 154px;
+    height: 45px;
+    cursor: pointer;
+}
+/*
+  ╭──────────╮
+  │  block3  │
+  ╰──────────╯
+*/
+#block3 {
+    margin-top: 79px;
+    width: 100%;
+    height: 162px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: flex-start;
+}
+#block3__points__input-wrapper,
+#block3__nft__input-wrapper {
+    width: 80px;
+    height: 40px;
+    margin: 0 20px 0 20px;
+    display: flex;
+    background-image: url("/img/ss/account/input.svg");
+}
+#block3 input {
+    margin: 0 10px;
+    width: 50px;
+    background: transparent;
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+#block3__points__btn,
+#block3__nft__btn {
+   cursor: pointer;
+}
+/*#block3__status,*/
+/*#block3__points {*/
+/*    width: 63%;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+/*#block3__spaceship,*/
+/*#block3__nft {*/
+/*    width: 37%;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+#block3>div:nth-child(1),
+#block3>div:nth-child(3) {
+    width: 55%;
+    display: flex;
+    align-items: center;
+}
+#block3>div:nth-child(2),
+#block3>div:nth-child(4) {
+    width: 45%;
+    display: flex;
+    align-items: center;
+}
+#block3__points > span,
+#block3__nft > span,
+#block3__status > span,
+#block3__spaceship > span {
+    margin-left: 20px;
+    width: 80px;
+    text-align: right;
+}
+
+#block3__points {
+}
+#block3__nft {
+}
+#block3__status {
+}
+#block3__spaceship {
+}

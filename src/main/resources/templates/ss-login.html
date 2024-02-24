@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta th:replace="ss-blocks::head-meta"/>
+	<title th:if="${param.signin != null}">Space Sweepers | Sign in</title>
+	<title th:if="${param.signup != null}">Space Sweepers | Sign up</title>
+	<link th:replace="ss-blocks::head-link"/>
+	<link rel="stylesheet" type="text/css" href="/css/ss/login.css"/>
+	<script th:replace="ss-blocks::head-script"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+	<script defer type="text/javascript" src="/js/ss/login.js"></script>
+</head>
+<body onkeyup="onKeyUpEnter(event);">
+<header th:replace="ss-blocks::header"></header>
+<main class="main">
+	<form>
+		<h1 th:if="${param.signin != null}">Sign in</h1>
+		<h1 th:if="${param.signup != null}">Sign up</h1>
+		<div class="login__email field">
+			<span>
+				<label for="login__email-input" class="login__email-caption">Email:</label>
+				<input id="login__email-input" class="login__email-input" name="email" type="email"
+				       placeholder="enter your email here" autocomplete="email" oninput="onChangeInput();" />
+			</span>
+		</div>
+		<div class="login__password field">
+			<span>
+				<label for="login__password-input" class="login__password-caption">Password:</label>
+				<input id="login__password-input" class="login__password-input" name="password" type="password"
+				       placeholder="enter your password here" autocomplete="current-password"
+				       oninput="onChangeInput();" />
+				<img id="login__eye-hide" class="login__eye" onclick="onClickEye();" src="/img/ss/login/eye-hide.svg"/>
+				<img id="login__eye-show" class="login__eye hidden" onclick="onClickEye();"
+				     src="/img/ss/login/eye-show.svg"/>
+			</span>
+		</div>
+		<div th:if="${param.signup != null}" class="login__nick field hidden">
+			<span>
+				<label for="login__nick-input" class="login__nick-caption">Nick in game:</label>
+				<input id="login__nick-input" class="login__nick-input" name="nick" type="text"
+				       placeholder="SatoshiNakomoto" autocomplete="nickname" oninput="onChangeInputNick();" />
+				<img class="login__check-box" src="/img/ss/login/check-box.svg" />
+			</span>
+		</div>
+		<div class="login__enter login__enter-inactive field" onclick="onClickEnter();">Enter</div>
+		<div th:if="${param.signup != null}" id="login__verification" class="field hidden">
+			<div id="login__verification__instruction">
+				<div>Follow next steps:</div>
+				<div>1. Open your mailbox and find an email verification letter from Space Sweepers.</div>
+				<div>2. After completing the verification, click Check verification button.</div>
+			</div>
+			<div id="login__verification__buttons">
+				<div id="login__verification__enter" onclick="onClickEnter();">Enter</div>
+				<div id="login__verification__resend" onclick="onClickResend();"><div>Resend<br/>verification letter</div></div>
+			</div>
+		</div>
+
+	</form>
+	<div th:if="${param.signin != null}" class="login__link">Don’t have an account? <a
+			href="/space-sweepers/login?signup">Sign Up!</a></div>
+	<div th:if="${param.signup != null}" class="login__link">Already have an account? <a
+			href="/space-sweepers/login?signin">Sign In!</a></div>
+</main>
+<footer th:replace="ss-blocks::footer"></footer>
+</body>
+</html>

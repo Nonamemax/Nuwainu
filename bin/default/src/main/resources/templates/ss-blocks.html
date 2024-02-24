@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta th:fragment="head-meta" charset="UTF-8">
+	<meta th:fragment="head-meta" http-equiv="Pragma" content="no-cache" />
+	<meta th:fragment="head-meta" http-equiv="Cache-Control" content="no-cache" />
+	<meta th:fragment="head-meta" name="theme-color" content="#090909">
+	<meta th:fragment="head-meta" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.25, maximum-scale=1.0, user-scalable=0" />
+
+	<link th:fragment="head-link" rel="icon" type="image/x-icon" href="/img/ss/favicon32.ico" />
+
+	<link th:fragment="head-link" rel="preconnect" href="https://fonts.googleapis.com" />
+	<link th:fragment="head-link" rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link th:fragment="head-link" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+	<link th:fragment="head-link" rel="stylesheet" href="/css/ss/common.css" />
+
+<!--	<script th:fragment="head-script" async src="/js/lib/web3.min.js"></script>-->
+	<script th:fragment="head-script" src="/js/lib/svg-injector.min.js"></script>
+	<script th:fragment="head-script" defer src="/js/ss/common.js"></script>
+</head>
+<body>
+	<header th:fragment="header" id="block-header">
+		<nav id="block-header__nav">
+			<a id="block-header__home" href="/space-sweepers/home">HOME</a>
+			<a id="block-header__presentation" href="/space-sweepers/presentation">PRESENTATION</a>
+			<a id="block-header__roadmap" href="/space-sweepers/roadmap">ROADMAP</a>
+		</nav>
+		<a href="/space-sweepers/home">
+			<img id="block-header__logo" src="/img/ss/logo-ss.svg" />
+		</a>
+		<div id="block-header__account">
+			<span id="block-header__wallet">
+				<span id="block-header__wallet-text" onclick="onClickConnectWallet();">Connect Wallet</span>
+				<img id="block-header__wallet-btn" src="/img/ss/connect.svg" onclick="onClickConnectWallet();" />
+				<div id="block-header__wallet-dialog-box" class="hidden">
+					<div id="block-header__wallet-dialog-box-header">Connect Wallet - Metamask</div>
+					<img id="block-header__wallet-dialog-box-metamask" src="/img/wallet/metamask.svg" onclick="onClickDialogBoxMetamask();" />
+					<div id="block-header__wallet-dialog-box-caption">Click on Fox</div>
+					<div id="block-header__wallet-dialog-box-install-wallet">Don't have <a href="https://metamask.io/">a crypto wallet</a> yet?</div>
+				</div>
+				<div id="block-header__account-dialog-box" class="hidden">
+					<a id="block-header__account-dialog-box__account" href="/space-sweepers/account">Account</a>
+					<a id="block-header__account-dialog-box__home" href="/space-sweepers/account/home">Home</a>
+					<a id="block-header__account-dialog-box__nft" href="">NFT Store</a>
+				</div>
+			</span>
+			<span id="block-header__sign" onclick="onClickSignInUp(this);">
+				<span th:if="${user == null}">
+					<a href="/space-sweepers/login?signin">Sign in</a> / <a href="/space-sweepers/login?signup">Sign up</a>
+				</span>
+				<a th:if="${user != null}" href="/space-sweepers/account">
+					<span id="block-header__nick" th:text="${user.nick}">Satoshi</span>
+					<div id="block-header__avatar-wrapper">
+						<img id="block-header__avatar" alt="avatar" src="/img/ss/avatar/1.png"/>
+						<img id="block-header__avatar-frame" src="/img/ss/account/photo-frame.svg"/>
+					</div>
+				</a>
+			</span>
+		</div>
+	</header>
+
+	<footer th:fragment="footer" id="block-footer" class="block-footer">
+		<div class="block-footer__hr"></div>
+		<div class="block-footer__content">
+			<a href="https://www.binance.org/"><img class="block-footer__bsc" src="/img/ss/bsc.png" /></a>
+			<div class="block-footer__logo-nuwainu">
+				<div>Prod. by</div>
+				<a href="/">
+					<img src="/img/ss/logo-nuwainu-full.png" />
+				</a>
+			</div>
+			<div class="block-footer__contacts">
+				<a href="https://discord.gg/zRWnHGGcrG">DISCORD</a>&nbsp;&nbsp;
+				<a href="https://t.me/spacesweepers_game">TELEGRAM</a>&nbsp;&nbsp;
+				<a href="https://twitter.com/space__sweepers">TWITTER</a>
+			</div>
+			<a class="block-footer__ios" href="#">
+				<img src="/img/ss/ios.svg" />
+			</a>
+			<a class="block-footer__android" href="#">
+				<img src="/img/ss/android.png" />
+			</a>
+		</div>
+	</footer>
+	<img th:fragment="footer" id="background-image" src="/img/ss/Background.jpg" />
+	<div th:fragment="footer" id="blackout" class="hidden" onclick="onClickBlackout();"></div>
+	<script th:fragment="footer"></script>
+</body>
+</html>

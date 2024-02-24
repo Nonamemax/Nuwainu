@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta th:replace="ss-blocks::head-meta" />
+	<title>Space Sweepers | Roadmap</title>
+	<link th:replace="ss-blocks::head-link" />
+	<link rel="stylesheet" type="text/css" href="/css/ss/roadmap.css" />
+	<script th:replace="ss-blocks::head-script"></script>
+	<script defer type="text/javascript" src="/js/ss/roadmap.js"></script>
+</head>
+<body>
+<header th:replace="ss-blocks::header"></header>
+<main class="main">
+	<div class="buttons">
+		<div class="button button__selected" onclick="onClickButton(this);">Q3 2022</div>
+		<div class="button" onclick="onClickButton(this);">Q4 2022</div>
+		<div class="button" onclick="onClickButton(this);">Q1 2023</div>
+	</div>
+	<div class="scrollbar">
+		<div class="scrollbar__rectangle-for-scrolling"></div>
+		<div class="scrollbar__rectangle-in-full-size"></div>
+	</div>
+	<div class="roadmap__content">
+		<h2 id="roadmap__title" class="roadmap__title">Q3 2022</h2>
+		<div id="roadmap__text" class="roadmap__text">Start testnet, listing testflight, sale nft ships.<br/>A game that was created at the MVP stage with a better rendered picture, functionality and quality. The passage of the game allows players to improve their professional level and move up to the second level.</div>
+	</div>
+</main>
+<footer th:replace="ss-blocks::footer"></footer>
+</body>
+</html>

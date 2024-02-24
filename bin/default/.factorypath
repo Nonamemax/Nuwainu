@@ -1,0 +1,4 @@
+<factorypath>
+    <factorypathentry kind="EXTJAR" id="C:\Users\2\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-configuration-processor\2.7.14\394a32e38d6c76db42b9a4d737a78c6aca027db2\spring-boot-configuration-processor-2.7.14.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="EXTJAR" id="C:\Users\2\.gradle\caches\modules-2\files-2.1\org.projectlombok\lombok\1.18.28\a2ff5da8bcd8b1b26f36b806ced63213362c6dcc\lombok-1.18.28.jar" enabled="true" runInBatchMode="false"/>
+</factorypath>

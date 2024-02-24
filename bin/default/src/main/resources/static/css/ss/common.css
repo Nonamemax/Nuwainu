@@ -1,0 +1,466 @@
+/*
+  ╭─────────────────╮
+  │  normalize.css  │
+  ╰─────────────────╯
+*/
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+body {
+    margin: 0;
+}
+main {
+    display: block;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+a {
+    background-color: transparent;
+}
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+}
+b,
+strong {
+    font-weight: bolder;
+}
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+small {
+    font-size: 80%;
+}
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sub {
+    bottom: -0.25em;
+}
+sup {
+    top: -0.5em;
+}
+img {
+    border-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+button,
+input {
+    overflow: visible;
+}
+button,
+select {
+    text-transform: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+progress {
+    vertical-align: baseline;
+}
+textarea {
+    overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+details {
+    display: block;
+}
+summary {
+    display: list-item;
+}
+template {
+    display: none;
+}
+[hidden] {
+    display: none;
+}
+/*
+  ╭────────╮
+  │  Font  │
+  ╰────────╯
+*/
+@font-face {
+    font-family: Exoplanetaria;
+    font-style: normal;
+    font-weight: normal;
+    src: local("Exoplanetaria"), url("/font/Exoplanetaria.woff") format("woff");
+}
+/*
+  ╭───────────────╮
+  │  Global vars  │
+  ╰───────────────╯
+*/
+:root {
+    --main-width: 1181px;
+    color: white;
+    background: #565656;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+}
+.hidden {
+    display: none;
+}
+.unvisible {
+    visibility: hidden;
+}
+.main {
+    width: var(--main-width);
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    margin: 0 auto calc(103px + 30px);
+}
+#background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -10;
+}
+#blackout {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 99px;
+    left: 0;
+    z-index: 4;
+    backdrop-filter: blur(5px);
+}
+@-moz-document url-prefix() {
+    #blackout {
+        background-color: rgba(0, 0, 0, .8);
+    }
+}
+
+/*
+  ╭──────────╮
+  │  Header  │
+  ╰──────────╯
+*/
+#block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1181px;
+    height: 29px;
+    margin: 83px auto 87px;
+    user-select: none;
+}
+#block-header__nav a {
+    margin-right: 15px;
+    text-decoration-line: none;
+    color: white;
+    font-family: Exoplanetaria, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    opacity: 0.5;
+}
+#block-header__nav a.selected {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.75);
+    cursor: default;
+}
+#block-header__nav a:not(.selected):hover {
+    opacity: 1;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+}
+#block-header__logo {
+    width: 180px;
+    height: 119px;
+    opacity: 1;
+}
+/*
+  ╭───────────╮
+  │  Account  │
+  ╰───────────╯
+*/
+#block-header__account {
+    display: flex;
+    align-items: center;
+}
+#block-header__wallet {
+    /*position: relative;*/
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 20px;
+    text-decoration-line: underline;
+}
+#block-header__wallet-text {
+    cursor: pointer;
+}
+.wallet-selected {
+    font-family: "Noto Mono", monospace;
+}
+#block-header__wallet-text:hover,
+#block-header__sign a:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+}
+#block-header__wallet-btn {
+    /*margin-left: 10px;*/
+    padding: 2px 10px;
+    cursor: pointer;
+}
+.block-header__wallet-dialog_show #block-header__wallet-btn {
+    transform: rotate(180deg);
+}
+#block-header__sign {
+    margin-left: 30px;
+    cursor: pointer;
+}
+#block-header__sign a {
+    color: white;
+    text-decoration: none;
+}
+#block-header__nick {
+    vertical-align: middle;
+}
+#block-header__avatar-wrapper {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: 69px;
+    height: 69px;
+    margin-left: 10px;
+}
+#block-header__avatar {
+    position: relative;
+    top: 4px;
+    left: 2px;
+    width: 64px;
+    height: 64px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 40% 100%, 0% 60%);
+}
+#block-header__avatar-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*
+  ╭──────────────╮
+  │  Dialog Box  │
+  ╰──────────────╯
+*/
+#block-header__wallet-dialog-box {
+    margin-top: 29px;
+    position: absolute;
+    background-image: url("/img/ss/wallets.svg");
+    width: 328px;
+    height: 285px;
+    z-index: 5;
+    backdrop-filter: blur(25px);
+    text-align: center;
+}
+@-moz-document url-prefix() {
+    #block-header__wallet-dialog-box {
+        background-color: rgba(0, 0, 0, .8);
+    }
+}
+#block-header__wallet-dialog-box-header {
+    margin-top: 39px;
+}
+#block-header__wallet-dialog-box-metamask {
+    margin-top: 36px;
+    width: 72px;
+    height: 67px;
+    cursor: pointer;
+}
+#block-header__wallet-dialog-box-caption {
+    margin-top: 16px;
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 14px;
+    /*line-height: 16px;*/
+}
+#block-header__wallet-dialog-box-install-wallet,
+#block-header__wallet-dialog-box-install-wallet > a {
+    margin-top: 41px;
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 14px;
+    /*line-height: 16px;*/
+}
+#block-header__wallet-dialog-box-install-wallet > a {
+    color: #ffac1b;
+    text-decoration: underline;
+}
+#block-header__account-dialog-box {
+    margin-top: 29px;
+    position: absolute;
+    background-image: url("/img/ss/wallets.svg");
+    width: 328px;
+    height: 285px;
+    z-index: 5;
+    backdrop-filter: blur(25px);
+    text-align: center;
+}
+/*
+  ╭──────────╮
+  │  Footer  │
+  ╰──────────╯
+*/
+.block-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 99px;
+    /*width: 100%;*/
+    background-color: rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+    user-select: none;
+}
+.block-footer__hr {
+    z-index: 5;
+    height: 4px;
+    background-color: #FFFFFF;
+    opacity: 1;
+}
+.block-footer__content {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100% - 10px - 4px);
+    width: calc(100% - 470px - 10px);
+    margin: 5px 470px 5px 10px;
+}
+.block-footer__bsc {
+    /*position: relative;*/
+    /*margin-top: 30px;*/
+    /*margin-left: 59px;*/
+    width: 288px;
+    height: 39px;
+}
+.block-footer__logo-nuwainu {
+    /*display: inline-block;*/
+    /*position: absolute;*/
+    /*width: 173px;*/
+    /*height: 29px;*/
+    /*margin-left: 80px;*/
+}
+.block-footer__logo-nuwainu div {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+}
+.block-footer__logo-nuwainu img {
+    width: 173px;
+    height: 18px;
+    cursor: pointer;
+}
+/*.block-footer__contacts {*/
+/*    display: inline-block;*/
+/*}*/
+.block-footer__contacts a {
+    text-decoration-line: none;
+    color: white;
+    font-family: Exoplanetaria, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    opacity: 0.5;
+}
+.block-footer__contacts a:hover {
+    opacity: 1;
+}
+.block-footer__ios {
+    position: absolute;
+    right: 260px;
+    top: 24px;
+    width: 180px;
+    height: 54px;
+}
+.block-footer__ios > img {
+    width: 180px;
+    height: 54px;
+}
+.block-footer__android {
+    position: absolute;
+    right: 59px;
+    top: 24px;
+    width: 180px;
+    height: 54px;
+}
+.block-footer__android > img {
+    width: 180px;
+    height: 54px;
+}

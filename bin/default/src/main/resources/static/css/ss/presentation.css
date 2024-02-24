@@ -1,0 +1,129 @@
+.main {
+    margin-top: 150px;
+    user-select: none;
+}
+/*
+  ╭───────────────╮
+  │  Screenshots  │
+  ╰───────────────╯
+*/
+.screenshots__h2 {
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 29px;
+}
+#screenshots__images {
+    --increasing-width: 22%;
+    --ss-height: 267px;
+    --ss-width: 580px;
+    /*margin-top: 150px;*/
+    position: relative;
+    width: calc(100% + var(--increasing-width));
+    height: var(--ss-height);
+    left: calc(var(--increasing-width) / -2);
+    overflow-x: hidden;
+}
+.screenshots__left,
+.screenshots__right,
+.screenshots__center,
+.screenshots__left-hidden,
+.screenshots__right-hidden {
+    position: absolute;
+    border-radius: 10px;
+    transition: all ease 1s;
+}
+.screenshots__left,
+.screenshots__right {
+    opacity: .4;
+    width: calc(var(--ss-width) * .7);
+    height: calc(var(--ss-height) * .7);
+    top: calc((var(--ss-height) * .3) / 2);
+    cursor: pointer;
+}
+.screenshots__left {
+    left: 0;
+}
+.screenshots__right {
+    left: calc(var(--main-width) * 1.22 - var(--ss-width) * .7);
+}
+.screenshots__center {
+    width: var(--ss-width);
+    height: var(--ss-height);
+    left: calc(50% - (var(--ss-width) / 2));
+    top: 0;
+}
+.screenshots__left-hidden,
+.screenshots__right-hidden {
+    opacity: .1;
+    width: calc(var(--ss-width) * .35);
+    height: calc(var(--ss-height) * .35);
+    top: calc((var(--ss-height) * .6) / 2);
+}
+.screenshots__left-hidden {
+    left: calc(var(--ss-width) * -.35);
+}
+.screenshots__right-hidden {
+    left: calc(var(--main-width) * 1.22);
+}
+/*
+  ╭────────────╮
+  │  Controls  │
+  ╰────────────╯
+*/
+#controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 41px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#controls__arrow-left-wrapper,
+#controls__arrow-right-wrapper {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#controls__arrow-left,
+#controls__arrow-right {
+    width: 13px;
+    height: 24px;
+}
+#controls__arrow-left-wrapper:hover #controls__arrow-left,
+#controls__arrow-right-wrapper:hover #controls__arrow-right {
+    width: 16px;
+    height: 29px;
+}
+#controls__rectangles {
+
+}
+.controls__rectangle {
+    width: 40px;
+    height: 4px;
+    margin: 0 7px;
+    opacity: 0.5;
+}
+.controls__rectangle-selected {
+    opacity: 1;
+}
+/*
+  ╭────────╮
+  │  Game  │
+  ╰────────╯
+*/
+#game {
+    text-align: center;
+    margin-top: 60px;
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 29px;
+    user-select: text;
+}
+#game-text {
+    margin: 21px auto 0 auto;
+    width: 580px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    user-select: text;
+}

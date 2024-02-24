@@ -1,0 +1,27 @@
+<svg width="131" height="132" viewBox="0 0 131 132" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_675_5644)">
+<g clip-path="url(#clip1_675_5644)">
+<path d="M122.682 8.3175H0V79.8823L51.1177 131H122.682V8.3175Z" fill="url(#pattern0)"/>
+</g>
+<path d="M124.344 122.01V129.039L122.359 131.023H100.012L109.025 122.01H124.344Z" fill="#ECAA29"/>
+<path d="M102.979 0.00012207L93.9884 9.01366H83.3169L92.3304 0.00012207H102.979Z" fill="#ECAA29"/>
+<path d="M86.6333 0.00012207L77.6432 9.01366H66.9717L75.9852 0.00012207H86.6333Z" fill="#ECAA29"/>
+<path opacity="0.5" d="M131 21.9501V68.9326L130.627 69.3063L124.018 75.9146L122.057 73.9531L128.221 67.7651V21.9501H131Z" fill="white"/>
+<path d="M0 105.01V105.781L25.2659 131.023H26.0365L0 105.01Z" fill="white"/>
+<path d="M122.01 9.01358V128.688H52.2599L2.33511 78.7868V9.01358H122.01ZM124.345 6.67847H0V79.7442L51.3725 131.117H124.345V6.67847Z" fill="white"/>
+<path d="M41.9382 131.023H25.2655L0.0229492 105.781V89.108L41.9382 131.023Z" fill="#ECAA29"/>
+<path d="M131 0.00012207L122.01 9.01366H99.6626L108.676 0.00012207H131Z" fill="white"/>
+<path d="M131 0.00012207L121.987 8.99031V31.3374L131 22.3238V0.00012207Z" fill="white"/>
+</g>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_675_5644" transform="translate(-0.0494994) scale(0.000556174)"/>
+</pattern>
+<clipPath id="clip0_675_5644">
+<rect width="131" height="131.117" fill="white"/>
+</clipPath>
+<clipPath id="clip1_675_5644">
+<rect width="122.682" height="122.682" fill="white" transform="translate(0 8.3175)"/>
+</clipPath>
+</defs>
+</svg>

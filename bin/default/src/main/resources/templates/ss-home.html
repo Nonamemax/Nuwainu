@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta th:replace="ss-blocks::head-meta" />
+	<title>Space Sweepers | Home</title>
+	<link th:replace="ss-blocks::head-link" />
+	<link rel="stylesheet" href="/css/ss/home.css" />
+	<script th:replace="ss-blocks::head-script"></script>
+	<script defer src="/js/ss/home.js"></script>
+</head>
+<body>
+<header th:replace="ss-blocks::header"></header>
+<main class="main">
+	<div class="h2-wrapper">
+		<h2>Since humanity</h2>
+		<h2>Space Sweepers</h2>
+	</div>
+	<div class="block1">
+		<div>had to leave Earth, the vast expanses of the universe have become a new home for those who survived. There are no more borders, problems of inequality and political games here. In the cold emptiness of space, the only task of humanity is to survive at any cost. And on the way to this goal, everyone will have to pay their fair price.</div>
+		<div class="block1__video">
+			<video poster="/img/ss/poster.jpg" class="block1__video-file" onclick="onClickVideo();">
+				<source type="video/mp4" src="/video/ss/SpaceSweepers.mp4">
+			</video>
+			<div class="block1__video-play" onclick="onClickPlay();"></div>
+		</div>
+		<div>is a community of participants, who at first glance have nothing in common. They come from different cultures, nations and ideological groups. But today, these differences don't matter. Something has appeared that unites them. It is the ability to survive and simultaneously benefit from the process. Their main rule is - "My space, my rules".</div>
+	</div>
+	<div class="block2">Watch our video-presentation about "Space Sweepers".</div>
+	<div class="block3">
+		<div>To successfully complete their mission, each participant of Space Sweepers needs a set of different tools. Among the most important is your own spaceship. It is the spaceship that opens the way to the most profitable craft in the universe - the collection of space garbage.</div>
+		<div>The dedication and activity of each participant will be fairly rewarded with tokens and NFT of the project. Everyone has the right to dispose of their awards in their own way. Someone will sell them, while the others will use them to upgrade their spaceship. This will open the door to completely new opportunities and of course, more generous rewards.</div>
+	</div>
+	<div class="block4">Don't miss your chance and be careful. There are no random finds in space. Any object you discover may turn out to be a pass-through ticket to the city of the future. The city of Nuwa Inu.</div>
+	<div class="buttons">
+		<div class="buttons__btn">
+			<div class="buttons__text">players</div>
+			<div class="buttons__value"><span>200.000</span><img src="/img/ss/player.png"/></div>
+		</div>
+		<div class="buttons__btn">
+			<div class="buttons__text">jack pot</div>
+			<div class="buttons__value">200.000 INU</div>
+		</div>
+		<div class="buttons__btn">
+			<div class="buttons__text">winning</div>
+			<div class="buttons__value">200.000 INU</div>
+		</div>
+		<div class="buttons__btn">
+			<div class="buttons__text">mined</div>
+			<div class="buttons__value">200.000 NUWA</div>
+		</div>
+	</div>
+</main>
+<footer th:replace="ss-blocks::footer"></footer>
+</body>
+</html>

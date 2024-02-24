@@ -1,0 +1,104 @@
+/*
+  ╭────────╮
+  │  Main  │
+  ╰────────╯
+*/
+.h2-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.h2-wrapper h2 {
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 29px;
+}
+.block1 {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+}
+.block1 :nth-child(2) {
+    flex-grow: 2;
+}
+.block1__video {
+    position: relative;
+    margin: 0 15px;
+}
+.block1__video video {
+    width: 580px;
+    height: 326px;
+}
+.block1__video-play {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: calc(50% - 25px);
+    top: calc(50% - 25px);
+    background-image: url("/img/ss/play.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+    cursor: pointer;
+}
+.block1__video-play:hover {
+    opacity: .7;
+}
+.block2 {
+    margin-top: 32px;
+    font-family: Roboto, sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    text-align: center;
+    opacity: .5;
+}
+.block3 {
+    margin-top: 81px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.block3 div {
+    /*display: inline-block;*/
+    width: 49%;
+    text-align: justify;
+}
+.block4 {
+    margin: 32px 25% 0 25%;
+    text-align: justify;
+}
+/*
+  ╭───────────╮
+  │  Buttons  │
+  ╰───────────╯
+*/
+.buttons {
+    margin-top: 60px;
+    margin-bottom: 150px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.buttons__btn {
+    width: 260px;
+    height: 100px;
+    background-image: url("/img/ss/home_btn.svg");
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+}
+.buttons__text {
+    margin-top: 19px;
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+.buttons__value {
+    margin-top: 10px;
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 26px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.75);
+}
+.buttons__value > img {
+    width: 25px;
+    position: absolute;
+    margin-top: -6px;
+}

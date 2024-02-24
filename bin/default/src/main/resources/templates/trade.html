@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000000" />
+	<meta name="msapplication-navbutton-color" content="#000000" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.25, maximum-scale=1.0, user-scalable=0" />
+	<title>Trade</title>
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+	<link rel="stylesheet" type="text/css" href="/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="/css/trade.css" />
+
+<!--	<script async type="text/javascript" src="/js/web3.min.js"></script>-->
+</head>
+<body>
+<script th:replace="blocks::script-header"></script>
+<header th:replace="blocks::header"></header>
+<nav th:replace="blocks::nav"></nav>
+<main id="main" class="block-main white">
+	<div class="main__center">
+		<div class="toggle">
+			<span class="toggle__swap_selected" onclick="onClickToggle(this);">Swap</span>
+			<span class="toggle__liquidity" onclick="onClickToggle(this);">Liquidity</span>
+		</div>
+		<div class="swap">
+			<div class="swap__header">
+				<div class="swap__header-1">
+					<div class="swap__title">Exchange</div>
+					<div class="swap__text">Trade tokens in an instant</div>
+				</div>
+				<div class="swap__header-2">
+					<img class="swap__setting" alt="Settings" title="Open the Settings dialog box" src="/img/trade/setting.svg" onclick="onClickDialog('settings');" />
+					<img class="swap__history" alt="History" title="Open the History dialog box" src="/img/trade/history.svg" onclick="onClickDialog('history');" />
+				</div>
+			</div>
+			<div class="swap__hr"></div>
+			<div class="swap__from-to">
+				<div class="swap__direction">From</div>
+				<div class="swap__amount">
+					<input class="swap__from-to-input" id="swap__from-input" value="0.0" type="text" />
+					<div class="swap__currency" onclick="onClickCurrent(this);">
+						<img class="swap__currency-icon hidden" src="" />
+						<span class="swap__currency-name">Currency</span>
+						<img class="swap__currency-arrow" src="/img/nav/arrow.svg" />
+					</div>
+				</div>
+			</div>
+			<div class="swap__arrow-down"><img src="/img/trade/arrow-down.svg" /></div>
+			<div class="swap__from-to">
+				<div class="swap__direction ">To</div>
+				<div class="swap__amount">
+					<input class="swap__from-to-input" id="swap__to-input" value="0.0" type="text" />
+					<div class="swap__currency" onclick="onClickCurrent(this);">
+						<img class="swap__currency-icon hidden" src="" />
+						<span class="swap__currency-name">Currency</span>
+						<img class="swap__currency-arrow" src="/img/nav/arrow.svg" />
+					</div>
+				</div>
+			</div>
+			<div class="swap__button">Unlock Wallet</div>
+		</div>
+		<div class="liquidity hidden">
+			<div class="liquidity__header">
+				<div class="liquidity__header-1">
+					<div class="liquidity__title">Your Liquidity</div>
+					<div class="liquidity__text">Remove liquidity to receive tokens back</div>
+				</div>
+				<div class="liquidity__header-2">
+					<img class="liquidity__setting" src="/img/trade/setting.svg" onclick="onClickDialog('settings');" />
+					<img class="liquidity__history" src="/img/trade/history.svg" onclick="onClickDialog('history');" />
+				</div>
+			</div>
+			<div class="liquidity__hr"></div>
+			<div class="liquidity__user-data">Connect to a wallet to view your liquidity.</div>
+			<div class="liquidity__button">Unlock Wallet</div>
+		</div>
+		<div class="settings hidden">
+			<div class="settings__header">
+				<spen class="settings__title">Settings</spen>
+				<img class="settings__close" alt="Close" title="Close" src="/img/trade/close.svg" onclick="onClickDialogBoxClose('settings');"/>
+			</div>
+			<div class="settings__hr"></div>
+			<div class="settings__body">
+			<div class="settings__h1">Transaction Settings</div>
+			<div class="settings__slippage-hint">
+				<span class="settings__slippage-hint-text">Slippage Tolerance</span>
+				<img class="settings__hint-img" src="/img/trade/hint.svg" />
+			</div>
+			<div class="settings__slippage-wrapper">
+				<span class="settings__slippage" onclick="onClickSlippage(this);">0.1%</span>
+				<span class="settings__slippage settings__slippage_selected" onclick="onClickSlippage(this);">0.5%</span>
+				<span class="settings__slippage" onclick="onClickSlippage(this);">1%</span>
+				<input class="settings__slippage-input" value="0.5" />
+				<img class="settings__percent-img" src="/img/trade/percent.svg" />
+			</div>
+			<div class="settings__transaction-hint">
+				<span class="settings__hint-text">Transaction deadline</span>
+				<img class="settings__hint-img" src="/img/trade/hint.svg" />
+			</div>
+			<div class="settings__minutes-wrapper">
+				<input type="text" class="settings__minutes-input" value="20" />
+				<span class="settings__minutes-text">Minutes</span>
+			</div>
+			<div class="settings__h2">Interface Settings</div>
+			<div class="settings__interface-wrapper">
+				<span>
+					<span class="settings__interface-hint">Slippage Tolerance</span>
+					<img class="settings__hint-img" src="/img/trade/hint.svg" />
+				</span>
+				<div class="settings__socket" onclick="onClickSettingsToggle(this);">
+					<div class="settings__toggle"></div>
+				</div>
+			</div>
+			<div class="settings__interface-wrapper">
+				<span>
+					<span class="settings__interface-hint">Disable Multihops</span>
+					<img class="settings__hint-img" src="/img/trade/hint.svg" />
+				</span>
+				<div class="settings__socket" onclick="onClickSettingsToggle(this);">
+					<div class="settings__toggle"></div>
+				</div>
+			</div>
+			<div class="settings__interface-wrapper">
+				<span>
+					<span class="settings__interface-hint">Audio</span>
+					<img class="settings__hint-img" src="/img/trade/hint.svg" />
+				</span>
+				<div class="settings__socket toggle_on" onclick="onClickSettingsToggle(this);">
+					<div class="settings__toggle"></div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="history hidden">
+			<div class="history__header">
+				<spen class="history__title">Recent Transactions</spen>
+				<img class="history__close" alt="Close" title="Close" src="/img/trade/close.svg" onclick="onClickDialogBoxClose('history');"/>
+			</div>
+			<div class="history__hr"></div>
+			<div class="history__body">
+				<span>Not found.</span>
+			</div>
+		</div>
+		<div></div>
+	</div>
+</main>
+<video class="background-video" preload="metadata" muted="muted" autoplay playsinline loop>
+<!--
+	<source type="video/webm" src="/video/background-nuwa-m.webm">
+	<source type="video/ogg" src="/video/background-nuwa-m.ogg">
+-->
+	<source type="video/mp4" src="/video/background-nuwa-m.mp4">
+</video>
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/trade.js"></script>
+</body>
+</html>

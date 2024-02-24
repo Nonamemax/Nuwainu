@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta th:fragment="head" name="yandex-verification" content="106b4a3361ba3425" />
+</head>
+<body>
+<script th:fragment="script-header">
+	(function () {
+		// Set a theme from cookie
+		let cookieName = "theme=";
+		let cookieValue;
+		let cookies = document.cookie.split(";");
+		cookies.forEach(val => {
+			let cookie = val.trim();
+			if (cookie.startsWith(cookieName)) {
+				cookieValue = cookie.substr(cookieName.length).trim();
+			}
+		});
+		if (typeof cookieValue !== undefined) {
+			document.body.classList.add("theme-" + cookieValue);
+		}
+	})();
+</script>
+<header th:fragment="header" id="block-header" class="block-header">
+	<img class="block-header__start" src="/img/header/start.svg" onclick="onClickHeaderStart();" />
+	<a href="/"><img class="block-header__title" src="/img/logo.svg" /></a>
+	<div class="block-header__connect" onclick="onClickConnect();">Connect</div>
+
+	<span class="block-header__profile" onclick="href('/profile');">
+		<img src="/img/header/profile.svg" />
+	</span>
+</header>
+<div th:fragment="header" class="window-connect hidden">
+	<div class="window-connect__header">
+		<div class="window-connect__header-text">Connect Wallet</div>
+		<div class="window-connect__header-close" onclick="onСlickCloseWindowConnect();"></div>
+	</div>
+	<div class="window-connect__hr"></div>
+	<div class="window-connect__body">
+		<img class="window-connect__wallet" src="/img/wallet/metamask.svg" onclick="onСlickSelectWallet('metamask');" />
+	</div>
+</div>
+<div th:fragment="header" class="message-box hidden">
+	<div class="message-box__text"></div>
+	<div class="message-box__close"></div>
+</div>
+
+<nav th:fragment="nav" id="block-nav" class="block-nav" compact="true">
+	<div id="block-nav__menu" class="block-nav__menu">
+		<div class="block-nav__item-l1" onclick="href('/home');"><img src="/img/nav/home.svg" /><span>Home</span></div>
+		<div class="block-nav__item-l1" onclick="href('/trade');"><img src="/img/nav/trade.svg" /><span>Trade</span></div>
+		<div class="block-nav__item-l1" onclick="href('/farms');"><img src="/img/nav/farms.svg" /><span>Farms</span></div>
+		<div class="block-nav__item-l1" onclick="href('/pools');"><img src="/img/nav/pools.svg" /><span>Pools</span></div>
+		<div class="block-nav__item-l1" onclick=""><img src="/img/nav/prediction.svg" /><span>Prediction <span class="soon">(soon)</span></span></div>
+		<div class="block-nav__item-l1" onclick="href('/space-sweepers/home');"><img src="/img/nav/lottery.svg" /><span>Game and Lottery</span></div>
+		<div class="block-nav__item-l1" onclick="href('/market');"><img src="/img/nav/market.svg" /><span>NFT Market</span></div>
+		<div class="block-nav__item-l1" onclick=""><img src="/img/nav/team-battle.svg" /><span>Team Battle <span class="soon">(soon)</span></span></div>
+		<div class="block-nav__item-l1" onclick="onClickMenuExpand(this)" id="menu__teams-profile">
+			<img src="/img/nav/teams-profile.svg" /><span>Teams & Profile</span>
+			<span style="width:100%; padding: 0;"></span>
+			<img src="/img/nav/arrow.svg" class="menu-arrow arrow" /></div>
+		<div class="block-nav__item-l2 teams-profile__item" onclick=""><span>Leaderboard <span class="soon">(soon)</span></span></div>
+		<div class="block-nav__item-l2 teams-profile__item" onclick=""><span>Task Center <span class="soon">(soon)</span></span></div>
+		<div class="block-nav__item-l2 teams-profile__item" onclick=""><span>Your Profile <span class="soon">(soon)</span></span></div>
+		<div class="block-nav__item-l1" onclick="href('/info');"><img src="/img/nav/info.svg" /><span>Info</span></div>
+		<div class="block-nav__item-l1" onclick=""><img src="/img/nav/ifo.svg" /><span>IFO <span class="soon">(soon)</span></span></div>
+		<div class="block-nav__item-l1" onclick="onClickMenuExpand(this)" id="menu__more">
+			<img src="/img/nav/more.svg" /><span>More</span>
+			<span style="width:100%; padding: 0;"></span>
+			<img src="/img/nav/arrow.svg" class="menu-arrow arrow" /></div>
+		<div class="block-nav__item-l2 more__item" onclick=""><span>Contact <span class="soon">(soon)</span></span></div>
+		<div class="block-nav__item-l2 more__item" onclick=""><span>Voting <span class="soon">(soon)</span></span></div>
+		<div class="block-nav__item-l2 more__item" onclick=""><span>Github <span class="soon">(soon)</span></span></div>
+		<div class="block-nav__item-l2 more__item" onclick=""><span>Docs <span class="soon">(soon)</span></span></div>
+		<div class="block-nav__item-l2 more__item" onclick=""><span>Blog <span class="soon">(soon)</span></span></div>
+		<div class="block-nav__item-l2 more__item" onclick=""><span>Merch <span class="soon">(soon)</span></span></div>
+	</div>
+	<div class="block-nav__footer">
+		<div  class="footer__hr"></div>
+		<div class="footer__maximize">
+			<div class="footer__line1">
+				<span class="footer__profile" onclick="href('/profile');">
+					<img src="/img/header/profile.svg" />
+				</span>
+				<span class="footer__price">$15.560</span>
+			</div>
+			<div class="footer__line2">
+				<span class="footer__theme">
+					<img src="/img/nav/light.svg" alt="light" title="Switch to a light theme" onclick="setTheme('light');" />
+					<span>/</span>
+					<img src="/img/nav/dark.svg" alt="dark" title="Switch to a dark theme" onclick="setTheme('dark');" />
+					<span>/</span>
+					<img src="/img/nav/rocket.svg" alt="rocket" title="Switch to the rocket theme" onclick="setTheme('rocket');" />
+				</span>
+				<span class="footer__line2-right-wrapper">
+					<img class="footer__settings" src="/img/nav/settings.svg" onclick="" />
+					<span class="footer__lang" onclick="onClickDialogLangShow();">EN</span>
+				</span>
+			</div>
+			<div class="dialog-lang">
+				<div class="dialog-lang__inner-wrapper">
+					<div class="dialog-lang__english current">English</div>
+					<div class="dialog-lang__spanish">Spanish (Español)</div>
+					<div class="dialog-lang__french">French (Français)</div>
+					<div class="dialog-lang__german">German (Deutsch)</div>
+					<div class="dialog-lang__chinese">Chinese (中文)</div>
+					<div class="dialog-lang__japanese">Japanese (日本語)</div>
+					<img class="dialog-lang__close" alt="Close" title="Close" src="/img/landing/menu-close.svg" onclick="onClickDialogLangClose();" />
+				</div>
+			</div>
+		</div>
+		<div class="footer__minimize hidden">
+			<img src="/img/nav/settings.svg" />
+		</div>
+	</div>
+</nav>
+</body>
+</html>

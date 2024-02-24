@@ -1,0 +1,85 @@
+.main {
+    margin-top: 150px;
+    user-select: none;
+}
+/*
+  ╭───────────╮
+  │  Buttons  │
+  ╰───────────╯
+*/
+.buttons {
+    display: inline-block;
+    vertical-align: top;
+}
+.button {
+    width: 180px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    margin-top: 18px;
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 26px;
+    cursor: pointer;
+    opacity: .5;
+
+    background-image: url("/img/ss/roadmap_btn.svg");
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+}
+.button:first-child {
+    margin-top: 0;
+}
+.button__selected {
+    opacity: 1;
+}
+/*
+  ╭─────────────╮
+  │  Scrollbar  │
+  ╰─────────────╯
+*/
+.scrollbar {
+    display: none;
+    /*display: inline-block;*/
+    vertical-align: top;
+    margin-left: 49px;
+    height: 336px;
+}
+.scrollbar__rectangle-for-scrolling {
+    display: inline-block;
+    vertical-align: top;
+    width: 4px;
+    height: 164px;
+    opacity: 0.39;
+    background: #FFFFFF;
+}
+.scrollbar__rectangle-in-full-size {
+    display: inline-block;
+    margin-left: 4px;
+    width: 6px;
+    height: 100%;
+    background: #FFFFFF;
+}
+/*
+  ╭───────────╮
+  │  Content  │
+  ╰───────────╯
+*/
+.roadmap__content {
+    display: inline-block;
+    vertical-align: top;
+    width: 478px;
+    margin-left: 57px;
+}
+.roadmap__title {
+    font-family: Exoplanetaria, sans-serif;
+    font-size: 29px;
+    line-height: 39px;
+    user-select: text;
+}
+.roadmap__text {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: justify;
+    user-select: text;
+}

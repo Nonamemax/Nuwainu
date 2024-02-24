@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<meta name="robots" content="noarchive" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0  maximum-scale=1.0, user-scalable=0" />
+	<title>Chat</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<div id="win">
+		<div id="left">
+			<div id="menu">
+
+			</div>
+			<div id="search">
+				<div id="search-panel">
+					<img id="icon-search" src="img/search.png">
+					<input id="search_editor" type="search" placeholder="Поиск…" autocomplete="off">
+					<img id="icon-clear" src="img/clear.png">
+				</div>
+			</div>
+			<div>
+				<ul id="contacts">
+					<li class="contact" chat="23432444" onclick="selectChat(this);">
+						<img class="icon-contact">
+						<snap class="username">Василий</snap>
+					</li>
+					<li class="contact" chat="23432411" onclick="selectChat(this);">
+						<img class="icon-contact">
+						<snap class="username">Пётр</snap>
+					</li>
+					<li class="contact" chat="23432422" onclick="selectChat(this);">
+						<img class="icon-contact">
+						<snap class="username">Ольга</snap>
+					</li>
+					<li class="contact" chat="23432433" onclick="selectChat(this);">
+						<img class="icon-contact">
+						<snap class="username">Никита</snap>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="right">
+			<header id="userinfo">
+				<snap id="head-username"></snap>
+				<snap id="head-status"></snap>
+				<snap id="head-info"></snap>
+				<img id="head-search" src="img/search.png">
+				<img id="head-menu" src="img/menu.png">
+			</header>
+			<main id="messages">
+
+			</main>
+			<footer id="editor">
+				<div id="edit-tag" contenteditable="true" data-tab="1" spellcheck="true"></div>
+			</footer>
+		</div>
+	</div>
+</body>
+</html>
